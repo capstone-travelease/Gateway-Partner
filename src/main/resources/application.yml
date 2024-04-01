@@ -35,10 +35,10 @@ spring:
 
 eureka:
   instance:
-    hostname: 34.143.171.128
+    hostname: 10.148.0.4
   client:
     service-url:
-      defaultZone: http://34.143.171.128:8761/eureka/
+      defaultZone: http://34.87.40.248:8761/eureka/
 
 
 
