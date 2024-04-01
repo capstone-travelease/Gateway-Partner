@@ -35,7 +35,7 @@ spring:
 
 eureka:
   instance:
-#    hostname: localhost
+    hostname: 10.148.0.2
     preferIpAddress: true
   client:
     service-url:
