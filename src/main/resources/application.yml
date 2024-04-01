@@ -38,7 +38,7 @@ eureka:
     hostname: 34.87.40.248
   client:
     service-url:
-      defaultZone: http://34.87.40.248:8761/eureka/
+      defaultZone: http://10.148.0.4:8761/eureka/
 
 
 
