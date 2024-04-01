@@ -41,6 +41,13 @@ eureka:
     service-url:
       defaultZone: http://34.87.40.248:8761/eureka/
 
+management:
+  endpoint:
+    gateway:
+      enabled=true
+    web:
+      exposure:
+        include=*
 
 
 
