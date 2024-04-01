@@ -4,7 +4,7 @@ services:
     container_name: gateway-partner
     image: coderbillzay/gateway-partner
     ports:
-      - '5528:5528'
+      - '7590:7590'
     volumes:
       - ./:/server
     restart: always

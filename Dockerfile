@@ -4,5 +4,5 @@ VOLUME /tmp
 
 COPY target/*.jar Gateway-API-0.0.1-SNAPSHOT.jar
 
-EXPOSE 5528
+EXPOSE 7590
 ENTRYPOINT ["java","-jar","/Gateway-API-0.0.1-SNAPSHOT.jar"]
