@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  login:
+    container_name: gateway-partner
+    image: coderbillzay/gateway-partner
+    ports:
+      - '5528:5528'
+    volumes:
+      - ./:/server
+    restart: always
