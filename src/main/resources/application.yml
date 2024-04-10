@@ -32,11 +32,11 @@ spring:
           filters:
             - ApplicationAuthenticationFilter
 
-        - id: MANAGE-HOTEL
-          uri: lb://manage-hotel
+        - id: MANAGE-HOTELS
+          uri: lb://manage-hotels
           predicates:
             - Path=/partner/api/**
-          filter:
+          filters:
             - ApplicationAuthenticationFilter
 
 
