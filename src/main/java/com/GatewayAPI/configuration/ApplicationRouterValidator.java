@@ -11,7 +11,7 @@ import java.util.function.Predicate;
 public class ApplicationRouterValidator {
     public static final List<String> openAPIEndPoints = List.of(
             "/auth/login",
-            "/auth/test",
+            "/auth/upload",
             "/auth/sign"
     );
 
