@@ -29,7 +29,7 @@ spring:
               - "Origin"
               - "Content-Type"
               - "Accept"
-              - "Token"
+              - "Authorization"
               - "Referer"
             allowedMethods:
               - POST
