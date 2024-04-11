@@ -38,14 +38,14 @@ public class ApplicationAuthenticationFilter  extends AbstractGatewayFilterFacto
             if (applicationRouterValidator.isSecured.test(exchange.getRequest())) {
                 ServerHttpResponse response = exchange.getResponse();
                 //header contains token or not
-                if (!exchange.getRequest().getHeaders().containsKey("token")) {
+                if (!exchange.getRequest().getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
                     try {
                         return handleError(response);
                     } catch (JsonProcessingException e) {
                         throw new RuntimeException(e);
                     }
                 }
-                String authHeader = exchange.getRequest().getHeaders().get("Token").get(0);
+                String authHeader = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
                 if (authHeader != null && authHeader.startsWith("Bearer ")) {
                     authHeader = authHeader.substring(7);
                 }
