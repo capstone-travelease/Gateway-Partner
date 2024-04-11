@@ -21,15 +21,19 @@ spring:
   cloud:
     gateway:
       globalcors:
+        add-to-simple-url-handler-mapping: true
         corsConfigurations:
           '[/**]':
-            allowedOrigins: '*'
-            allowedHeaders: '*'
+            allowedOrigins: "*"
+            allowedHeaders:
+              - "Origin"
+              - "Content-Type"
+              - "Accept"
+              - "Token"
+              - "Referer"
             allowedMethods:
-              - GET
               - POST
-              - PUT
-              - DELETE
+              - GET
       discovery:
         locator:
           enabled: true
