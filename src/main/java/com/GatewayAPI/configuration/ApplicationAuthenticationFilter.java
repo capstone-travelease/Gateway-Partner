@@ -66,7 +66,8 @@ public class ApplicationAuthenticationFilter  extends AbstractGatewayFilterFacto
 
         Map<String, Object> errBody = new HashMap<>();
         errBody.put("code",401);
-        errBody.put("message","UNAUTHORIZED");
+        errBody.put("error","UNAUTHORIZED");
+        errBody.put("message","EXPIRED_TOKEN");
         // Set the HTTP status code and response body
         response.setStatusCode(HttpStatus.UNAUTHORIZED);
         response.getHeaders().add("Content-Type", "application/json");

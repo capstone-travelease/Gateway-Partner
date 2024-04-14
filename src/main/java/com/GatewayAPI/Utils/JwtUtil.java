@@ -30,7 +30,7 @@ public class JwtUtil {
     private Date extractExpiration(String token){return  extractClaim(token,Claims::getExpiration);}
     public boolean isTokenValid(String token){
         final String userNameToken = extractClaim(token,Claims::getSubject);
-        String userNameDB = jwtRepository.findEmail(userNameToken);
+        String userNameDB = jwtRepository.findEmail(userNameToken,2);
         if(!userNameDB.isBlank() && !isTokenExpired(token)){
             return true;
         }
