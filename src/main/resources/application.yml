@@ -53,6 +53,13 @@ spring:
           filters:
             - ApplicationAuthenticationFilter
 
+        - id: MANAGE-ROOMS
+          uri: lb://manage-rooms
+          predicates:
+            - Path=/partner/api/**
+          filters:
+            - ApplicationAuthenticationFilter
+
 
 eureka:
   instance:
