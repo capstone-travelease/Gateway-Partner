@@ -49,7 +49,7 @@ spring:
         - id: AUTH-SERVICE
           uri: lb://auth-service
           predicates:
-            - Path=/auth/**
+            - Path=/partner/auth/**
           filters:
             - ApplicationAuthenticationFilter
 
