@@ -28,7 +28,7 @@ spring:
   cloud:
     gateway:
       default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
         add-to-simple-url-handler-mapping: true
         corsConfigurations:
@@ -40,11 +40,7 @@ spring:
               - "Accept"
               - "Authorization"
               - "Referer"
-            allowedMethods:
-              - POST
-              - GET
-              - PUT
-              - DELETE
+            allowedMethods: "*"
       discovery:
         locator:
           enabled: true
