@@ -56,14 +56,14 @@ spring:
         - id: MANAGE-HOTELS
           uri: lb://manage-hotels
           predicates:
-            - Path=/partner/api/**
+            - Path=/partner/hotel-management/**
           filters:
             - ApplicationAuthenticationFilter
 
         - id: MANAGE-ROOMS
           uri: lb://manage-rooms
           predicates:
-            - Path=/partner/api/**
+            - Path=/partner/room-managemet/**
           filters:
             - ApplicationAuthenticationFilter
 
