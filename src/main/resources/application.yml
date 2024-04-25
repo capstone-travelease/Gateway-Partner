@@ -63,7 +63,7 @@ spring:
         - id: MANAGE-ROOMS
           uri: lb://manage-rooms
           predicates:
-            - Path=/partner/**
+            - Path=/partner/api/rooms/**
           filters:
             - ApplicationAuthenticationFilter
 
