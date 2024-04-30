@@ -12,7 +12,7 @@ spring:
   application:
     name: gateway-api
   datasource:
-    url: jdbc:postgresql://35.240.226.176:5432/travelmarketplace
+    url: jdbc:postgresql://35.247.170.16:5432/travelmarketplace
     username: postgres
     password: capstonevlu
     jpa:
@@ -27,6 +27,8 @@ spring:
           format_sql: true
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
         add-to-simple-url-handler-mapping: true
         corsConfigurations:
@@ -38,9 +40,7 @@ spring:
               - "Accept"
               - "Authorization"
               - "Referer"
-            allowedMethods:
-              - POST
-              - GET
+            allowedMethods: "*"
       discovery:
         locator:
           enabled: true
@@ -56,14 +56,14 @@ spring:
         - id: MANAGE-HOTELS
           uri: lb://manage-hotels
           predicates:
-            - Path=/partner/api/**
+            - Path=/partner/hotel-management/**
           filters:
             - ApplicationAuthenticationFilter
 
         - id: MANAGE-ROOMS
           uri: lb://manage-rooms
           predicates:
-            - Path=/partner/**
+            - Path=/partner/room-management/**
           filters:
             - ApplicationAuthenticationFilter
 
@@ -71,10 +71,10 @@ spring:
 eureka:
   instance:
 #    preferIpAddress: true
-    hostname: 34.87.40.248
+    hostname: 35.247.174.194
   client:
     service-url:
-      defaultZone: http://34.87.40.248:8761/eureka/
+      defaultZone: http://35.247.174.194:8761/eureka/
 
 
 
