@@ -2,7 +2,7 @@ version: "3.3"
 services:
   login:
     container_name: gateway-partner
-    image: ngoctienwork2002/gateway-partner
+    image: coderbillzay/gateway-partner
     ports:
       - '7590:7590'
     volumes:
