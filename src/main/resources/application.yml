@@ -71,7 +71,7 @@ spring:
 eureka:
   instance:
 #    preferIpAddress: true
-#    hostname: 34.126.186.221
+    hostname: 10.148.0.10
     prefer-ip-address:  true
     ip-address: 10.148.0.10
   client:
