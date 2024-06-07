@@ -67,6 +67,13 @@ spring:
           filters:
             - ApplicationAuthenticationFilter
 
+        - id: MANAGE-BOOKING
+          uri: lb://manage-booking
+          predicates:
+            - Path=/partner/booking-management/**
+          filters:
+            - ApplicationAuthenticationFilter
+
 
 eureka:
   instance:
